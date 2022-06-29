@@ -1,0 +1,110 @@
+html {
+    background-color: #1a1c1e;
+    overflow-x: hidden;
+}
+#app {
+    color: #94a8bd;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.15rem;
+}
+
+.modal {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 90%;
+    max-width: 25rem;
+    height: 15rem;
+    background-color: #1a1c1e;
+    border: 2px solid #eedcff;
+    border-radius: 20px;
+    text-align: center; 
+    z-index: 11;
+}
+
+.is-modal-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1c1e;
+    z-index: 10;
+    opacity: 0.6;
+}
+
+.button {
+    background-color: #2a343c;
+    color: #cbe5ff;
+    padding: 10px 15px;
+    border: 1px solid #eedcff;
+    border-radius: 20px;
+    font-size: 1.15rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.is-primary {
+    background-color: #cbe5ff;
+    color: black;
+    font-size: 1.3rem;
+}
+.is-secondary-button {
+    background-color: #eedcff;
+    color: black;
+    font-size: 1.3rem;
+}
+.home {
+    padding-left: 1rem;
+    padding-right: 1rem; 
+    font-size: 1.2rem;
+}
+
+.input {
+    width: 60%;
+    height: 1.5rem;
+    margin: -3rem 0 1.2rem 0;
+    padding: 5px;
+    background-color: #2a343c;
+    border-radius: 10px;
+    color: #cbe5ff;
+    border: 3px solid #eedcff;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.is-devices-button {
+    width: 11rem;
+    margin-top: 2rem;
+}
+
+.is-add-button {
+    position: fixed;
+    bottom: 2rem;
+    margin: 0 auto;
+}
+
+.is-current-page {
+    color: #eedcff;
+}
+
+.is-nav-element {
+    font-size: 1.6rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.fade-leave-to,
+.fade-enter {
+  opacity: 0;
+}

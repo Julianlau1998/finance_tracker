@@ -1,0 +1,7 @@
+.is-calc-left-column {
+    margin: 0 2rem 0 1rem;
+}
+
+.is-result-columns {
+    align-items: flex-end;
+}
