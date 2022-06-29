@@ -88,6 +88,7 @@ html {
     position: fixed;
     bottom: 2rem;
     margin: 0 auto;
+    opacity: 0;
 }
 
 .is-current-page {

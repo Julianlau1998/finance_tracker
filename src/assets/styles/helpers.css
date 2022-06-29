@@ -253,6 +253,11 @@
     cursor: pointer;
 }
 
+.filler-1 {
+    width: 5rem;
+    height: 35rem;
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

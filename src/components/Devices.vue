@@ -44,8 +44,10 @@
         @edit="editDevice"
         />
     </div>
+    <div v-if="devices.length < 2" class="filler-1">
+    </div>
     <div class="is-justify-content-center">
-        <button @click="$emit('home')" class="button is-devices-button is-add-button">
+        <button @click="$emit('home')" ref="addButton" class="button is-devices-button is-add-button">
             Add Device
         </button>
     </div>
@@ -66,7 +68,12 @@ export default {
     created () {
         let devices = JSON.parse(localStorage.getItem('devices'))
         this.devices = devices === undefined || devices === null ? [] : devices 
-        console.log(devices)
+        setTimeout(() => {
+            this.$refs.addButton.style.opacity = 1
+        }, 300)
+    },
+    beforeDestroy () {
+        this.$refs.addButton.style.opacity = 0
     },
     methods: {
         deleteDevice (uuid) {

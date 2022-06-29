@@ -70,7 +70,6 @@ export default {
       ) { 
         this.componentTransitionName = 'swipe-component-left'
         this.page = 1
-        setTimeout(250)
       } else if (
         this.page === 1 &&
         direction == 'right'
@@ -78,7 +77,6 @@ export default {
         this.device = {}
         this.componentTransitionName = 'swipe-component-right'
         this.page = 0
-        setTimeout(250)
       }
     },
   }
