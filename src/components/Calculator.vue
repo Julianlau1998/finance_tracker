@@ -138,9 +138,9 @@ export default {
             this.price = this.editDevice.price
         } else {
             this.edit = false
-            this.hours = 0
-            this.watts = 0
-            this.price = 0
+            this.hours = null
+            this.watts = null
+            this.price = null
         }
     },
     computed: {
