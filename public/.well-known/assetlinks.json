@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "app.electricity_calc_jl.com",
+                     "sha256_cert_fingerprints": ["66:C5:65:C2:A9:AC:99:DE:24:81:2E:D1:0F:69:F2:B8:8A:B6:BB:2B:43:6D:5C:F8:F6:EC:5A:68:FD:B1:03:A1"] }
+      }
+]
