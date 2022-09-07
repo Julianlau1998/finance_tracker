@@ -6,10 +6,14 @@
 
 .is-device {
     width: 80%;
-    max-width: 20rem;
+    max-width: 16rem;
     background-color: #2a343c;
     border: 2px solid #eedcff;
     border-radius: 10px;
     margin: 0.1rem;
     margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+}
+
+.is-device-title {
+    word-break: break-all;
 }

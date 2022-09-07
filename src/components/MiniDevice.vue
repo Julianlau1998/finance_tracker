@@ -1,15 +1,21 @@
 <template>
   <div class="is-device pb-1 mb-2 pl-3 pr-3">
-        <h3>
+        <h3 class="is-secondary">
             {{ device.title }}
         </h3>
-        <p class="mt-negative-4">
-            Hours: <span> {{ device.hours }}h/Day </span>
+        <p class="mt-negative-4 is-device-title">
+            <span> 
+                Hours:
+            </span> 
+            {{ device.hours }}h/Day
             <br>
-
-            <span> Power: </span> {{ device.watts }}W
+            <span> 
+                Power:
+            </span> 
+            {{ device.watts }}W
             <br>
-            <span> Price/KWh: </span> {{ device.price }}
+            <span> Price/KWh: </span> 
+            {{ device.price }}
         </p>
         <div class="mt-negative-3 mb-2">
             <button class="button" @click="$emit('delete', device.uuid)">

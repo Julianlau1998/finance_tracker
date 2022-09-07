@@ -25,14 +25,6 @@
                 {{ daily }}
             </div>
         </div>
-        <!-- <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-            <div class="column is-3 mt-2 is-calc-left-column">
-                Hourly Cost:
-            </div>
-            <div class="column is-7 ml-negative-5">
-                {{ hourly }}
-            </div>
-        </div> -->
     </div>
     <div class="hr mt-5" />
     <div class="mt-5 mb-6 is-justify-content-center is-flex-wrap-wrap devices">
