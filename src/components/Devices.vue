@@ -32,7 +32,7 @@
         v-for="device in devices"
         :key="device.uuid"
         :device="device"
-        @delete="deleteDevice"
+        @delete="openDeleteModal"
         @edit="editDevice"
         />
     </div>
@@ -43,18 +43,29 @@
             Add Device
         </button>
     </div>
+    <DeleteModal
+        v-if="showDeleteModal"
+        :device="deviceToDelete"
+        @delete="deleteDevice"
+        @cancel="hideDeleteModal"
+    />
   </div>
 </template>
 
 <script>
 import miniDevice from '@/components/MiniDevice'
+import DeleteModal from '@/components/modals/DeleteModal'
+
 export default {
     components: {
-        miniDevice
+        miniDevice,
+        DeleteModal
     },
     data () {
         return {
             devices: [],
+            deviceToDelete: {},
+            showDeleteModal: false
         }
     },
     created () {
@@ -68,11 +79,21 @@ export default {
         this.$refs.addButton.style.opacity = 0
     },
     methods: {
+        openDeleteModal (device) {
+            this.showDeleteModal = true
+            this.deviceToDelete = device
+        },
+        hideDeleteModal () {
+            this.showDeleteModal = false
+            this.deviceToDelete = {}
+        },
         deleteDevice (uuid) {
             let devices = this.devices
             devices = devices.filter(el => el.uuid !== uuid)
             localStorage.setItem('devices', JSON.stringify(devices))
             this.devices = devices
+            this.showDeleteModal = false
+            this.deviceToDelete = {}
         },
         editDevice (uuid) {
             let devices = this.devices

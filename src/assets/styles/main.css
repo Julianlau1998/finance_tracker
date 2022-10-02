@@ -15,6 +15,7 @@ html {
 
 .modal {
     margin: auto;
+    padding: 0 0.5rem;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     width: 90%;
@@ -25,6 +26,12 @@ html {
     border-radius: 20px;
     text-align: center; 
     z-index: 11;
+}
+
+.is-delete-modal {
+    border: 2px solid rgb(147, 0, 0);
+    box-shadow: 0 0 0 20000px rgba(0, 0, 0, 0.318);
+    height: 13.5rem;
 }
 
 .is-modal-wrapper {

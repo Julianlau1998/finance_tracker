@@ -18,7 +18,7 @@
             {{ device.price }}
         </p>
         <div class="mt-negative-3 mb-2">
-            <button class="button" @click="$emit('delete', device.uuid)">
+            <button class="button" @click="$emit('delete', device)">
                 Delete
             </button>
             <button class="button" @click="$emit('edit', device.uuid)">

@@ -103,7 +103,13 @@
         <button @click="openModal" class="button is-devices-button">
             {{ this.edit ? 'Save' : 'Add Device to list' }}
         </button>
-        <addDeviceModal @close="closeAddModal" @add="saveDevice" v-if="showAddModal" />
+        <addDeviceModal
+            @close="closeAddModal"
+            @add="saveDevice"
+            v-if="showAddModal"
+            :edit-title="editDevice.title"
+            :edit="edit"
+        />
     </div>
 </template>
 
@@ -167,12 +173,9 @@ export default {
                 !this.hours === null || this.hours <= 0 ||
                 !this.watts === null || this.watts <= 0 ||
                 !this.price === null || this.price <= 0
-            ) { return }
-            if (this.edit) {
-                this.saveDevice()
-            } else {
-                this.showAddModal = true
-            }
+            ) return
+            
+            this.showAddModal = true
         },
         saveDevice (title) {
             const device = { hours: this.hours, watts: this.watts, price: this.price }
@@ -183,7 +186,7 @@ export default {
             if (this.edit) {
                 device.uuid = this.editDevice.uuid
                 const index = devices.findIndex((device => device.uuid == this.editDevice.uuid));
-                devices[index].title = this.editDevice.title
+                devices[index].title = title
                 devices[index].hours = this.hours
                 devices[index].watts = this.watts
                 devices[index].price = this.price
