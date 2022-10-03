@@ -5,24 +5,24 @@
         </h3>
         <p class="mt-negative-4 is-device-title">
             <span> 
-                Hours:
+                {{ $t('devices.hours') }}
             </span> 
             {{ device.hours }}h/Day
             <br>
             <span> 
-                Power:
+                {{ $t('devices.power') }}
             </span> 
             {{ device.watts }}W
             <br>
-            <span> Price/KWh: </span> 
+            <span> {{ $t('devices.price') }} </span> 
             {{ device.price }}
         </p>
         <div class="mt-negative-3 mb-2">
             <button class="button" @click="$emit('delete', device)">
-                Delete
+                {{ $t('devices.delete') }}
             </button>
             <button class="button" @click="$emit('edit', device.uuid)">
-                Edit
+                {{ $t('devices.edit') }}
             </button>
         </div>
   </div>

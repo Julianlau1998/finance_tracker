@@ -1,21 +1,24 @@
 <template>
   <div class="modal">
       <h3>
-          {{ edit ? 'Edit device from list' : 'Add device to list' }}
+          {{ edit ? $t('calculator.modal.save') : $t('calculator.modal.add') }}
       </h3>
       <input
         v-model="title"
+        ref="title"
         type="text"
         class="input mt-1"
-        placeholder="Device Name"
+        :placeholder="$t('calculator.modal.input')"
+        autofocus
+        @keydown.enter="add"
       >
       <br>
       <div class="mt-3">
         <button @click="close" class="button">
-            Close
+            {{ this.$t('calculator.modal.close') }}
         </button>
         <button @click="add" class="button">
-            {{ edit ? 'Save Device' : 'Add Device' }}
+            {{ edit ? $t('calculator.modal.saveButton') : $t('calculator.modal.addButton') }}
         </button>
       </div>
   </div>
@@ -39,6 +42,9 @@ export default {
         return {
             title: this.editTitle,
         }
+    },
+    mounted () {
+        this.$refs.title.focus()
     },
     methods: {
         add () {

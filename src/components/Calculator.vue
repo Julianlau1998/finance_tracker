@@ -4,10 +4,10 @@
             <div class="field pt-3 pb-5" ref="calculator">
                 <div class="hr mb-5-5" />
                 <div class="control mt-3">
-                    <div class="columns is-mobile is-justify-content-start is-align--center mt-2">
+                    <div class="columns is-mobile is-justify-content-start mt-2">
                         <div class="column is-4 is-result-columns is-calc-left-column">
                             <label for="price" class="is-size-4">
-                                Hours per day:
+                                {{ $t('calculator.hoursInput') }}
                             </label>
                         </div>
                         <div class="column is-7 is-result-columns">
@@ -24,10 +24,10 @@
                     </div>
                 </div>
                 <div class="control">
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center">
+                    <div class="columns is-mobile is-justify-content-start">
                         <div class="column is-4 mt-3 is-calc-left-column">
                             <label for="shipping" class="is-size-4">
-                                Power (Watts):
+                                {{ $t('calculator.power') }}
                             </label>
                         </div>
                         <div class="column is-7">
@@ -44,10 +44,10 @@
                     </div>
                 </div>
                 <div class="control">
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center">
+                    <div class="columns is-mobile is-justify-content-start">
                         <div class="column is-4 mt-3 is-calc-left-column">
                             <label for="shipping" class="is-size-4">
-                                Price per KWh:
+                                {{ $t('calculator.cost') }}{{ currency.length ? ` (${currency})` : '' }}:
                             </label>
                         </div>
                         <div class="column is-7">
@@ -65,43 +65,43 @@
                 </div>
                 <div class="hr" />
                 <div class="mt-5 ml-3">
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-                        <div class="column is-3 mt-2 is-calc-left-column">
-                            Cost per Month:
+                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
+                        <div class="column is-4 mt-2 is-calc-left-column">
+                            {{ $t('calculator.month') }}
                         </div>
-                        <div class="column is-7">
-                            {{ monthly }}
-                        </div>
-                    </div>
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-                        <div class="column is-3 mt-2 is-calc-left-column">
-                            Cost per Year:
-                        </div>
-                        <div class="column is-7">
-                            {{ yearly }}
+                        <div class="column is-3-5">
+                            {{ monthly }}{{ currency }}
                         </div>
                     </div>
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-                        <div class="column is-3 mt-2 is-calc-left-column">
-                            Cost per Day:
+                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
+                        <div class="column is-4 mt-2 is-calc-left-column">
+                            {{ $t('calculator.year') }}
                         </div>
-                        <div class="column is-7">
-                            {{ daily }}
+                        <div class="column is-3-5">
+                            {{ yearly }}{{ currency }}
                         </div>
                     </div>
-                    <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-                        <div class="column is-3 mt-2 is-calc-left-column">
-                            Cost per Hour:
+                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
+                        <div class="column is-4 mt-2 is-calc-left-column">
+                            {{ $t('calculator.day') }}
                         </div>
-                        <div class="column is-7">
-                            {{ hourly }}
+                        <div class="column is-3-5">
+                            {{ daily }}{{ currency }}
+                        </div>
+                    </div>
+                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
+                        <div class="column is-4 mt-2 is-calc-left-column">
+                            {{ $t('calculator.hour') }}
+                        </div>
+                        <div class="column is-3-5">
+                            {{ hourly }}{{ currency }}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <button @click="openModal" class="button is-devices-button">
-            {{ this.edit ? 'Save' : 'Add Device to list' }}
+            {{ this.edit ? $t('calculator.save') : $t('calculator.add') }}
         </button>
         <addDeviceModal
             @close="closeAddModal"
@@ -132,7 +132,8 @@ export default {
             watts: null,
             price: null,
             showAddModal: false,
-            edit: false
+            edit: false,
+            currency: ''
         }
     },
     created () {
@@ -147,6 +148,12 @@ export default {
             this.hours = null
             this.watts = null
             this.price = null
+        }
+
+        //currency
+        const localCurrency = localStorage.getItem('currency')
+        if (localCurrency) {
+            this.currency = JSON.parse(localCurrency)
         }
     },
     computed: {

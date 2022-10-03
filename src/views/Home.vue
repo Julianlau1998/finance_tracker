@@ -6,14 +6,14 @@
         :class="page===0 ? 'is-current-page' : ''"
         @click="page=0"
       >
-        Calculator
+        {{ $t('calculator.title') }}
       </span> 
       <span
         class="is-pointer is-nav-element ml-1"
         :class="page===1 ? 'is-current-page' : ''"
         @click="page=1"
       >
-        Devices
+        {{ $t('devices.title') }}
       </span>
     </div>
     <transition

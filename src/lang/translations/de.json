@@ -1,0 +1,54 @@
+{
+  "settings": {
+    "title": "Einstellungen",
+    "currency": "Währung:",
+    "currencies": {
+      "pound": "£ Pfund Sterling",
+      "euro": "€ Euro",
+      "dollar": "$ Dollar"
+    },
+    "language": "Sprache:",
+    "languages": {
+      "german": "Deutsch",
+      "english": "Englisch"
+    },
+    "home": "Zurück"
+  },
+  "calculator": {
+    "title": "Rechner",
+    "hoursInput": "Stunden pro Tag:",
+    "power": "Strom (Watt):",
+    "cost": "Preis pro KWh",
+    "month": "Kosten pro Monat:",
+    "year": "Kosten pro Jahr:",
+    "day": "Kosten pro Tag:",
+    "hour": "Kosten pro Stunde:",
+    "add": "Gerät zur Liste hinzufügen",
+    "save": "Speichern",
+    "modal": {
+      "add": "Gerät zur Liste hinzufügen",
+      "save": "Gerät Speicher",
+      "input": "Gerätename",
+      "close": "Schließen",
+      "addButton": "Hinzufügen",
+      "saveButton": "Speichern"
+    }
+  },
+  "devices": {
+    "title": "Geräte",
+    "monthly": "Monatlich:",
+    "yearly": "Jährlich:",
+    "daily": "Täglich:",
+    "hours": "Stunden:",
+    "power": "Strom:",
+    "price": "Preis/KWh:",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Gerät hinzufügen",
+    "deleteModal": {
+      "title": "Bist Du sicher, dass du das Gerät löschen möchtest?",
+      "cancel": "Abbrechen",
+      "delete": "Löschen"
+    }
+  }
+}

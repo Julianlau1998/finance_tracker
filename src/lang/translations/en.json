@@ -1,0 +1,54 @@
+{
+  "settings": {
+    "title": "Settings",
+    "currency": "Currency:",
+    "currencies": {
+      "pound": "£ Pound Sterling",
+      "euro": "€ Euro",
+      "dollar": "$ Dollar"
+    },
+    "language": "Language:",
+    "languages": {
+      "german": "German",
+      "english": "English"
+    },
+    "home": "Home"
+  },
+  "calculator": {
+    "title": "Calculator",
+    "hoursInput": "Hours per day:",
+    "power": "Power (Watts):",
+    "cost": "Price per KWh",
+    "month": "Cost per Month:",
+    "year": "Cost per Year:",
+    "day": "Cost per Day:",
+    "hour": "Cost per Hour:",
+    "add": "Add device to list",
+    "save": "Save",
+    "modal": {
+      "add": "Add device to list",
+      "save": "Edit device from list",
+      "input": "Device Name",
+      "close": "Close",
+      "addButton": "Add Device",
+      "saveButton": "Save Device"
+    }
+  },
+  "devices": {
+    "title": "Devices",
+    "monthly": "Monthly Cost:",
+    "yearly": "Yearly Cost:",
+    "daily": "Daily Cost:",
+    "hours": "Hours:",
+    "power": "Power:",
+    "price": "Price/KWh:",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add Device",
+    "deleteModal": {
+      "title": "Are You Sure You want to delete the device",
+      "cancel": "Cancel",
+      "delete": "Delete Device"
+    }
+  }
+}

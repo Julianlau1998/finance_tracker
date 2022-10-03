@@ -57,6 +57,10 @@ html {
     margin: 0.5rem;
 }
 
+.header {
+    color: rgb(169, 169, 169);
+}
+
 .is-primary {
     background-color: #cbe5ff;
     color: black;
@@ -74,9 +78,9 @@ html {
 }
 
 .input {
-    width: 60%;
+    width: 50%;
     height: 1.5rem;
-    margin: -3rem 0 1.2rem 0;
+    margin: -3rem 1rem 1.2rem 0;
     padding: 5px;
     background-color: #2a343c;
     border-radius: 10px;
@@ -86,8 +90,40 @@ html {
     padding-left: 15px;
 }
 
+.select {
+    width: 95%;
+    height: 2.5rem;
+    padding: 5px;
+    background-color: #2a343c;
+    border-radius: 10px;
+    color: #cbe5ff;
+    border: 3px solid #eedcff;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+
 .is-devices-button {
     width: 11rem;
+    margin-top: 2rem;
+}
+
+.is-home-button {
+    width: 7rem;
     margin-top: 2rem;
 }
 

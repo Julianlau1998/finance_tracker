@@ -1,28 +1,28 @@
 <template>
   <div class="pb-6">
     <div class="mt-5 mr-3 is-justify-content-center is-flex-wrap-wrap">
-        <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-            <div class="column is-3 mt-2 is-calc-left-column">
-                Monthly Cost:
+        <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
+            <div class="column is-3-5 mt-2 is-calc-left-column">
+                {{ $t('devices.monthly') }}
             </div>
-            <div class="column is-7 ml-negative-5">
-                {{ monthly }}
-            </div>
-        </div>
-        <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
-            <div class="column is-3 mt-2 is-calc-left-column">
-                Yearly Cost:
-            </div>
-            <div class="column is-7 ml-negative-5">
-                {{ yearly }}
+            <div class="column is-2 ml-negative-5">
+                {{ monthly }}{{currency}}
             </div>
         </div>
-        <div class="columns is-mobile is-justify-content-start is-align-items-center is-result-columns">
+        <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
             <div class="column is-3 mt-2 is-calc-left-column">
-                Daily Cost:
+                {{ $t('devices.yearly') }}
             </div>
-            <div class="column is-7 ml-negative-5">
-                {{ daily }}
+            <div class="column is-2 ml-negative-5">
+                {{ yearly }}{{currency}}
+            </div>
+        </div>
+        <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
+            <div class="column is-3 mt-2 is-calc-left-column">
+                {{ $t('devices.daily') }}
+            </div>
+            <div class="column is-2 ml-negative-5">
+                {{ daily }}{{currency}}
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
     </div>
     <div class="is-justify-content-center">
         <button @click="$emit('home')" ref="addButton" class="button is-devices-button is-add-button">
-            Add Device
+            {{ $t('devices.add') }}
         </button>
     </div>
     <DeleteModal
@@ -65,7 +65,8 @@ export default {
         return {
             devices: [],
             deviceToDelete: {},
-            showDeleteModal: false
+            showDeleteModal: false,
+            currency: ""
         }
     },
     created () {
@@ -74,6 +75,11 @@ export default {
         setTimeout(() => {
             this.$refs.addButton.style.opacity = 1
         }, 300)
+
+        const localCurrency = localStorage.getItem('currency')
+        if (localCurrency) {
+            this.currency = JSON.parse(localCurrency)
+        }
     },
     beforeDestroy () {
         this.$refs.addButton.style.opacity = 0

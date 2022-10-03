@@ -20,6 +20,7 @@ export default {
 @import './assets/styles/calculator.css';
 @import './assets/styles/overview.css';
 @import './assets/styles/helpers.css';
+@import './assets/styles/settings.css';
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
