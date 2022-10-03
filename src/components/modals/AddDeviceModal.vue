@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
       <h3>
-          {{ edit ? 'Add device to list' : 'Edit device from list' }}
+          {{ edit ? 'Edit device from list' : 'Add device to list' }}
       </h3>
       <input
         v-model="title"
