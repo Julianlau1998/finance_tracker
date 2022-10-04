@@ -10,6 +10,10 @@
                 <div v-if="settings" class="settingsItems settings">
                     <span v-if="helpAvailable">
                         <span @click="openSettings" class="is-pointer mt-6 setting noselect">
+                            <i
+                                class="fas fa-wrench is-smallIcon"
+                                @click="settings=!settings"
+                            />
                             Settings
                         </span>
                     </span>
@@ -22,7 +26,7 @@
                 </div>
                 <i
                     v-if="helpAvailable || playBillingSupported"
-                    class="fas fa-ellipsis-v settings-icon is-pointer"
+                    class="fas fa-bars settings-icon is-pointer"
                     @click="settings=!settings"
                 />
             </div>
