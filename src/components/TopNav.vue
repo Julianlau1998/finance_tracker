@@ -9,12 +9,12 @@
             <div class="column settingsWrapper">
                 <div v-if="settings" class="settingsItems settings">
                     <span v-if="helpAvailable">
-                        <span @click="openSettings" class="is-pointer mt-6 setting noselect">
+                        <span @click="openSettings" class="is-icon-container is-pointer mt-6 setting noselect">
                             <i
                                 class="fas fa-wrench is-smallIcon"
                                 @click="settings=!settings"
                             />
-                            Settings
+                            {{ $t('settings.title') }}
                         </span>
                     </span>
                     <!-- <div class="hr" />
