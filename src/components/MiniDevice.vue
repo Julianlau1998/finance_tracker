@@ -7,7 +7,7 @@
             <span> 
                 {{ $t('devices.hours') }}
             </span> 
-            {{ device.hours }}h/Day
+            {{ device.hours }}h/{{ $t('devices.day') }}
             <br>
             <span> 
                 {{ $t('devices.power') }}
@@ -15,7 +15,7 @@
             {{ device.watts }}W
             <br>
             <span> {{ $t('devices.price') }} </span> 
-            {{ device.price }}
+            {{ device.price }}{{currency}}
         </p>
         <div class="mt-negative-3 mb-2">
             <button class="button" @click="$emit('delete', device)">
@@ -34,6 +34,17 @@ export default {
         device: {
             type: Object,
             required: true
+        }
+    },
+    data () {
+        return {
+            currency: ''
+        }
+    },
+    created () {
+        const localCurrency = localStorage.getItem('currency')
+        if (localCurrency) {
+            this.currency = JSON.parse(localCurrency)
         }
     }
 }

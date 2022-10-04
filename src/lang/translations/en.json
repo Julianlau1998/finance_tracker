@@ -45,6 +45,7 @@
     "delete": "Delete",
     "edit": "Edit",
     "add": "Add Device",
+    "day": "Day",
     "deleteModal": {
       "title": "Are You Sure You want to delete the device",
       "cancel": "Cancel",

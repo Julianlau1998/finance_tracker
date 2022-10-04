@@ -45,6 +45,7 @@
     "delete": "Löschen",
     "edit": "Bearbeiten",
     "add": "Gerät hinzufügen",
+    "day": "Tag",
     "deleteModal": {
       "title": "Bist Du sicher, dass du das Gerät löschen möchtest?",
       "cancel": "Abbrechen",
