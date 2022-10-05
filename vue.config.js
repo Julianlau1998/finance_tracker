@@ -8,7 +8,13 @@ module.exports = {
     navigationDividerColor: "#1a1c1e",
     navigationDividerColorDark: "#1a1c1e",
     backgroundColor: '#1a1c1e',
-    appleMobileWebAppCapable: 'yes',
+    mobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'default',
+    start_url: '.',
+  },
+  workboxPluginMode: 'InjectManifest',
+  workboxOptions: {
+   swSrc: 'src/service-worker.js',
+   exclude: [/\.map$/, /_redirects/],
   }
 }
