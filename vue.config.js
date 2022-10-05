@@ -7,9 +7,8 @@ module.exports = {
     navigationColorDark: "#1a1c1e",
     navigationDividerColor: "#1a1c1e",
     navigationDividerColorDark: "#1a1c1e",
-    backgroundColor: '#2a343c',
-    mobileWebAppCapable: 'yes',
+    backgroundColor: '#1a1c1e',
+    appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'default',
-    start_url: '.',
   }
 }
