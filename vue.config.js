@@ -11,10 +11,5 @@ module.exports = {
     mobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'default',
     start_url: '.',
-  },
-  workboxPluginMode: 'InjectManifest',
-  workboxOptions: {
-   swSrc: 'src/service-worker.js',
-   exclude: [/\.map$/, /_redirects/],
   }
 }
