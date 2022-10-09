@@ -36,10 +36,9 @@
             </div>
             <div class="column is-3">
                 <select
-                    v-model="$i18n.locale"
+                    v-model="selectedLanguage"
                     class="select"
                     id="language"
-                    v-bind="selectedLanguage"
                 >
                     <option
                     v-for="(lang, i) in langs" :key="`Lang${i}`"
@@ -72,10 +71,20 @@ export default {
         if (localCurrency) {
             this.currency = JSON.parse(localCurrency)
         }
+        this.selectedLanguage = localStorage.getItem('language')
+        if (this.selectedLanguage) {
+          this.selectedLanguage = JSON.parse(this.selectedLanguage)
+        } else {
+          this.selectedLanguage = ''
+        }
     },
     watch: {
         currency (val) {
             localStorage.setItem('currency', JSON.stringify(val))
+        },
+        selectedLanguage (val) {
+          this.$i18n.locale = val
+          localStorage.setItem('language', JSON.stringify(val))
         }
     },
     methods: {

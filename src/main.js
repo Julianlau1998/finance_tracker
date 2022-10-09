@@ -15,13 +15,14 @@ const messages = {
   German: langs.de
 }
 
-let chosenLanguage = localStorage.getItem('language')
+let chosenLanguage = JSON.parse(localStorage.getItem('language'))
 if (chosenLanguage === null) {
   if (navigator.language === 'de-DE') {
-    chosenLanguage = 'German'  
+    chosenLanguage = 'German'
   } else {
     chosenLanguage = 'English'
   }
+  localStorage.setItem('language', JSON.stringify(chosenLanguage))
 }
 
 const i18n = new VueI18n({
