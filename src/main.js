@@ -19,6 +19,13 @@ let chosenLanguage = JSON.parse(localStorage.getItem('language'))
 if (chosenLanguage === null) {
   if (navigator.language === 'de-DE') {
     chosenLanguage = 'German'
+    localStorage.setItem('currency', JSON.stringify("€"))
+  } else if (navigator.language === 'en-GB') {
+    chosenLanguage = 'English'
+    localStorage.setItem('currency', JSON.stringify("£"))
+  } else if (navigator.language === 'en-US') {
+    chosenLanguage = 'English'
+    localStorage.setItem('currency', JSON.stringify("$"))
   } else {
     chosenLanguage = 'English'
   }
