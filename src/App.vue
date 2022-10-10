@@ -10,6 +10,24 @@ import topnav from '@/components/TopNav'
 export default {
   components: {
     topnav
+  },
+  data () {
+    return  {
+      selectedLanguage: ''
+      }
+  },
+  created() {
+    this.selectedLanguage = localStorage.getItem('language')
+    if (this.selectedLanguage) {
+      this.selectedLanguage = JSON.parse(this.selectedLanguage)
+    } else {
+      this.selectedLanguage = ''
+    }
+  },
+  watch: {
+    selectedLanguage (val) {
+      if (val.length) this.$i18n.locale = val
+    }
   }
 }
 </script>
