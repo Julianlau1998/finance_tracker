@@ -53,7 +53,8 @@
     <button @click="home" class="button is-home-button">
         {{ $t('settings.home') }}
     </button>
-    <button class="button is-support-button-2" id="support" @click="support">
+    <br>
+    <button v-if="iosApp" class="button is-support-button" id="support" @click="support">
       Watch Ad To Support The Developer
     </button>
   </div>
@@ -81,6 +82,11 @@ export default {
           this.selectedLanguage = ''
         }
     },
+    computed: {
+      iosApp () {
+        return window.webkit && window.webkit.messageHandlers
+      }
+    },
     watch: {
         currency (val) {
             localStorage.setItem('currency', JSON.stringify(val))
@@ -95,7 +101,7 @@ export default {
             this.$router.push('/')
         },
         support () {
-          if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toggleMessageHandler) {
+          if (this.iosApp && window.webkit.messageHandlers.toggleMessageHandler) {
             window.webkit.messageHandlers.toggleMessageHandler.postMessage({
               "message": 'Trigger reward-ad:'
             });

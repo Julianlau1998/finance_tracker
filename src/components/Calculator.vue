@@ -103,10 +103,6 @@
         <button @click="openModal" class="button is-devices-button">
             {{ this.edit ? $t('calculator.save') : $t('calculator.add') }}
         </button>
-        <br>
-        <button class="button is-support-button" id="support" @click="support">
-          Watch Ad To Support The Developer
-        </button>
         <addDeviceModal
             @close="closeAddModal"
             @add="saveDevice"

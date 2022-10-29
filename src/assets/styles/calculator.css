@@ -7,17 +7,14 @@
 }
 
 .is-support-button {
-    margin-top: 5rem;
     background-color: transparent;
     padding: 10px;
-    position: absolute;
-    bottom: 0rem;
-    left: 0rem;
-    height: 5rem;
-    opacity: 0;
+    width: 15rem;
+    margin-top: 6rem;
 }
 
-.is-support-button-2 {
-    opacity: 0;
-    height: 10rem;
+@media (max-width: 300px) {
+    .is-support-button {
+        width: 70vw;
+    }
 }
