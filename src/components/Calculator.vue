@@ -118,7 +118,7 @@
 </template>
 
 <script>
-import { uuid } from 'vue-uuid'
+import { v4 as uuid } from "uuid";
 import addDeviceModal from '@/components/modals/AddDeviceModal'
 
 export default {
@@ -202,7 +202,7 @@ export default {
                 devices[index].watts = this.watts
                 devices[index].price = this.price
             } else {
-                device.uuid = uuid.v4()
+                device.uuid = uuid()
                 devices.push(device)
             }
 
