@@ -103,6 +103,10 @@
         <button @click="openModal" class="button is-devices-button">
             {{ this.edit ? $t('calculator.save') : $t('calculator.add') }}
         </button>
+        <br>
+        <button class="button is-support-button" id="support" @click="support">
+          Watch Ad To Support The Developer
+        </button>
         <addDeviceModal
             @close="closeAddModal"
             @add="saveDevice"
@@ -211,6 +215,13 @@ export default {
         },
         closeAddModal () {
             this.showAddModal = false
+        },
+        support () {
+          if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toggleMessageHandler) {
+            window.webkit.messageHandlers.toggleMessageHandler.postMessage({
+              "message": 'Trigger reward-ad:'
+            });
+          }
         }
     }
 }
