@@ -53,6 +53,9 @@
     <button @click="home" class="button is-home-button">
         {{ $t('settings.home') }}
     </button>
+    <button class="button is-support-button-2" id="support" @click="support">
+      Watch Ad To Support The Developer
+    </button>
   </div>
 </template>
 
@@ -90,6 +93,13 @@ export default {
     methods: {
         home () {
             this.$router.push('/')
+        },
+        support () {
+          if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toggleMessageHandler) {
+            window.webkit.messageHandlers.toggleMessageHandler.postMessage({
+              "message": 'Trigger reward-ad:'
+            });
+          }
         }
     }
 }
