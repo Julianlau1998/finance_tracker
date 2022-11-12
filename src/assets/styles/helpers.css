@@ -301,3 +301,10 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
   }
+
+
+@media (max-width: 480px) {
+    .min-12 {
+        min-width: 13rem;
+    }
+}

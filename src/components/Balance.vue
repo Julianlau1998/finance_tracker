@@ -1,6 +1,6 @@
 <template>
   <div class="mt-5 mr-3 is-justify-content-center is-flex-wrap-wrap">
-    <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
+    <div class="columns min-12 mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
       <div class="column is-3 mt-2 is-calc-left-column">
         {{ $t('income.title') }}:
       </div>
@@ -8,7 +8,7 @@
         {{ income }}{{currency}}
       </div>
     </div>
-    <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
+    <div class="columns min-12 mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
       <div class="column is-3 mt-2 is-calc-left-column">
         {{ $t('expenses.title') }}:
       </div>
@@ -16,7 +16,7 @@
         {{ expenses }}{{currency}}
       </div>
     </div>
-    <div class="columns mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
+    <div class="columns min-12 mx-4 is-mobile is-justify-content-start is-result-columns is-text-align-left">
       <div class="column is-3 mt-2 is-calc-left-column">
         {{ $t('balance') }}:
       </div>
