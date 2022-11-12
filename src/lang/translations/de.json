@@ -14,21 +14,36 @@
     },
     "home": "Zurück"
   },
+  "balance": "Differenz",
+  "expenses": {
+    "title": "Ausgaben",
+    "smallTitle": "Ausgabe",
+    "modal": {
+      "add": "Hinzufügen",
+      "save": "Bearbeiten"
+    }
+  },
+  "income": {
+    "title": "Einnahmen",
+    "smallTitle": "Einnahme",
+    "modal": {
+      "add": "Hinzufügen",
+      "save": "Bearbeiten"
+    }
+  },
   "calculator": {
     "title": "Rechner",
-    "hoursInput": "Stunden pro Tag:",
-    "power": "Strom (Watt):",
-    "cost": "Preis pro KWh",
-    "month": "Kosten pro Monat:",
-    "year": "Kosten pro Jahr:",
-    "day": "Kosten pro Tag:",
-    "hour": "Kosten pro Stunde:",
+    "addExpense": "Add Expense",
+    "addIncome": "Add Income",
+    "expense": "Expense:",
+    "income": "Income:",
     "add": "Gerät zur Liste hinzufügen",
     "save": "Speichern",
     "modal": {
       "add": "Gerät zur Liste hinzufügen",
       "save": "Gerät Speicher",
-      "input": "Gerätename",
+      "input": "Titel",
+      "amountInput": "Höhe",
       "close": "Schließen",
       "addButton": "Hinzufügen",
       "saveButton": "Speichern"

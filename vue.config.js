@@ -1,6 +1,6 @@
 module.exports = {
   pwa: {
-    name: 'Electricity Cost Calculator',
+    name: 'Expenses Tracker',
     themeColor: '#2a343c',
     msTileColor: '#1a1c1e',
     navigationColor: "#1a1c1e",

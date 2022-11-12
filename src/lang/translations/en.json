@@ -14,28 +14,44 @@
     },
     "home": "Home"
   },
+  "balance": "Balance",
+  "expenses": {
+    "title": "Expenses",
+    "smallTitle": "Expense",
+    "modal": {
+      "add": "Add Expense",
+      "save": "Edit Expense"
+    }
+  },
+  "income": {
+    "title": "Income",
+    "smallTitle": "Income",
+    "modal": {
+      "add": "Add Income",
+      "save": "Edit Income"
+    }
+  },
+
   "calculator": {
-    "title": "Calculator",
-    "hoursInput": "Hours per day:",
-    "power": "Power (Watts):",
-    "cost": "Price per KWh",
-    "month": "Cost per Month:",
-    "year": "Cost per Year:",
-    "day": "Cost per Day:",
-    "hour": "Cost per Hour:",
-    "add": "Add device to list",
+    "title": "Add",
+    "addExpense": "Add Expense",
+    "addIncome": "Add Income",
+    "expense": "Expense:",
+    "income": "Income:",
+    "add": "Add to list",
     "save": "Save",
     "modal": {
-      "add": "Add device to list",
+      "add": "Add to list",
       "save": "Edit device from list",
-      "input": "Device Name",
+      "input": "Title",
+      "amountInput": "Amount",
       "close": "Close",
-      "addButton": "Add Device",
-      "saveButton": "Save Device"
+      "addButton": "Add",
+      "saveButton": "Save"
     }
   },
   "devices": {
-    "title": "Devices",
+    "title": "Overview",
     "monthly": "Monthly Cost:",
     "yearly": "Yearly Cost:",
     "daily": "Daily Cost:",
@@ -44,12 +60,12 @@
     "price": "Price/KWh:",
     "delete": "Delete",
     "edit": "Edit",
-    "add": "Add Device",
+    "add": "Add",
     "day": "Day",
     "deleteModal": {
-      "title": "Are You Sure You want to delete the device",
+      "title": "Are You Sure You want to delete",
       "cancel": "Cancel",
-      "delete": "Delete Device"
+      "delete": "Delete"
     }
   }
 }

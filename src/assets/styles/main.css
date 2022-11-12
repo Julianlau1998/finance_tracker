@@ -28,6 +28,10 @@ html {
     z-index: 11;
 }
 
+.is-add-modal {
+    height: 18rem;
+}
+
 .is-delete-modal {
     border: 2px solid rgb(147, 0, 0);
     box-shadow: 0 0 0 20000px rgba(0, 0, 0, 0.318);
@@ -131,7 +135,10 @@ select {
     position: fixed;
     bottom: 2rem;
     margin: 0 auto;
-    opacity: 0;
+    opacity: 1;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
 }
 
 .is-current-page {

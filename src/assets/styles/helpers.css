@@ -283,6 +283,10 @@
     height: 35rem;
 }
 
+.filler-2 {
+    height: 3.5rem;
+}
+
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */

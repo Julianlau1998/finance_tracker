@@ -4,10 +4,10 @@
             <div class="field pt-3 pb-5" ref="calculator">
                 <div class="hr mb-5-5" />
                 <div class="control mt-3">
-                    <div class="columns is-mobile is-justify-content-start mt-2">
-                        <div class="column is-4 is-result-columns is-calc-left-column">
+                    <div class="columns is-mobile is-justify-content-center mt-2">
+                        <div class="column is-6 is-result-columns is-calc-left-column">
                             <label for="price" class="is-size-4">
-                                {{ $t('calculator.hoursInput') }}
+                                {{ $t('calculator.income') }}
                             </label>
                         </div>
                         <div class="column is-7 is-result-columns">
@@ -23,81 +23,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="control">
-                    <div class="columns is-mobile is-justify-content-start">
-                        <div class="column is-4 mt-3 is-calc-left-column">
-                            <label for="shipping" class="is-size-4">
-                                {{ $t('calculator.power') }}
-                            </label>
-                        </div>
-                        <div class="column is-7">
-                            <input
-                                id="shipping"
-                                v-model="watts"
-                                class="input mt-1 is-input"
-                                type="number"
-                                min="0"
-                                placeholder="0"
-                                autocomplete="off"
-                            >
-                        </div>
-                    </div>
-                </div>
-                <div class="control">
-                    <div class="columns is-mobile is-justify-content-start">
-                        <div class="column is-4 mt-3 is-calc-left-column">
-                            <label for="shipping" class="is-size-4">
-                                {{ $t('calculator.cost') }}{{ currency.length ? ` (${currency})` : '' }}:
-                            </label>
-                        </div>
-                        <div class="column is-7">
-                            <input
-                                id="shipping"
-                                v-model="price"
-                                class="input mt-1 is-input"
-                                type="number"
-                                min="0"
-                                placeholder="0"
-                                autocomplete="off"
-                            >
-                        </div>
-                    </div>
-                </div>
+                <button class="button">
+                  {{ $t('calculator.addIncome') }}
+                </button>
+
                 <div class="hr" />
-                <div class="mt-5 ml-3">
-                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
-                        <div class="column is-4 mt-2 is-calc-left-column">
-                            {{ $t('calculator.month') }}
-                        </div>
-                        <div class="column is-3-5">
-                            {{ monthly }}{{ currency }}
-                        </div>
+
+                <div class="control mt-6">
+                  <div class="columns is-mobile is-justify-content-center mt-2">
+                    <div class="column is-6 is-result-columns is-calc-left-column">
+                      <label for="price" class="is-size-4">
+                        {{ $t('calculator.expense') }}
+                      </label>
                     </div>
-                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
-                        <div class="column is-4 mt-2 is-calc-left-column">
-                            {{ $t('calculator.year') }}
-                        </div>
-                        <div class="column is-3-5">
-                            {{ yearly }}{{ currency }}
-                        </div>
+                    <div class="column is-7 is-result-columns">
+                      <input
+                          id="price"
+                          v-model="hours"
+                          class="input is-input"
+                          type="number"
+                          min="0"
+                          placeholder="0"
+                          autocomplete="off"
+                      >
                     </div>
-                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
-                        <div class="column is-4 mt-2 is-calc-left-column">
-                            {{ $t('calculator.day') }}
-                        </div>
-                        <div class="column is-3-5">
-                            {{ daily }}{{ currency }}
-                        </div>
-                    </div>
-                    <div class="columns is-mobile is-text-align-left is-justify-space-between is-result-columns">
-                        <div class="column is-4 mt-2 is-calc-left-column">
-                            {{ $t('calculator.hour') }}
-                        </div>
-                        <div class="column is-3-5">
-                            {{ hourly }}{{ currency }}
-                        </div>
-                    </div>
+                  </div>
                 </div>
+                <button class="button">
+                  {{ $t('calculator.addExpense') }}
+                </button>
+                <div class="hr" />
             </div>
         </div>
         <button @click="openModal" class="button is-devices-button">
@@ -115,7 +70,7 @@
 
 <script>
 import { v4 as uuid } from "uuid";
-import addDeviceModal from '@/components/modals/AddDeviceModal'
+import addDeviceModal from '@/components/modals/AddModal'
 
 export default {
     components: { addDeviceModal },
