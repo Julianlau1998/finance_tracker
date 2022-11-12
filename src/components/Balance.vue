@@ -69,7 +69,6 @@ export default {
       this.allExpenses.forEach((expense) => {
         totalExpense += parseFloat(expense.amount)
       })
-      console.log(totalExpense)
       this.expenses = totalExpense
       this.income = totalIncome
       this.balance = this.income - this.expenses
