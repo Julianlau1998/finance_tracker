@@ -18,6 +18,8 @@
   "expenses": {
     "title": "Expenses",
     "smallTitle": "Expense",
+    "welcomeTitle": "Welcome!",
+    "welcome": "Just press the button below to start tracking your expenses.",
     "modal": {
       "add": "Add Expense",
       "save": "Edit Expense"
@@ -26,6 +28,8 @@
   "income": {
     "title": "Income",
     "smallTitle": "Income",
+    "welcomeTitle": "Welcome!",
+    "welcome": "Just press the button below to start tracking your income.",
     "modal": {
       "add": "Add Income",
       "save": "Edit Income"

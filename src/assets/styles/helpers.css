@@ -267,6 +267,11 @@
     padding-left: 3rem !important;
 }
 
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 .has-text-left {
     float: left;
 }

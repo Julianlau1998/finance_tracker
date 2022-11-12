@@ -1,6 +1,13 @@
 <template>
   <div class="pb-6">
     <div class="hr mt-5" />
+    <div v-if="!expenses.length" class="px-4">
+      <h4>
+        {{ $t('expenses.welcomeTitle') }}
+        <br>
+        {{ $t('expenses.welcome') }}
+      </h4>
+    </div>
     <div class="mt-5 mb-6 is-justify-content-center is-flex-wrap-wrap devices">
       <miniDevice
         v-for="expense in expenses"

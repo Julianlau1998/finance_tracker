@@ -18,6 +18,8 @@
   "expenses": {
     "title": "Ausgaben",
     "smallTitle": "Ausgabe",
+    "welcomeTitle": "Wilkommen!",
+    "welcome": "Klicke einfach auf den Plus-Button um deine Ausgaben hizuzufügen",
     "modal": {
       "add": "Hinzufügen",
       "save": "Bearbeiten"
@@ -26,6 +28,8 @@
   "income": {
     "title": "Einnahmen",
     "smallTitle": "Einnahme",
+    "welcomeTitle": "Wilkommen!",
+    "welcome": "Klicke einfach auf den Plus-Button um deine Einnahmen hizuzufügen",
     "modal": {
       "add": "Hinzufügen",
       "save": "Bearbeiten"
