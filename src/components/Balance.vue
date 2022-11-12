@@ -71,7 +71,7 @@ export default {
       })
       this.expenses = Math.round(totalExpense * 100) / 100
       this.income = Math.round(totalIncome * 100) / 100
-      this.balance = this.income - this.expenses
+      this.balance = Math.round((this.income - this.expenses) * 100) / 100
     }
   }
 }
