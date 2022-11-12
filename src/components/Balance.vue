@@ -69,8 +69,8 @@ export default {
       this.allExpenses.forEach((expense) => {
         totalExpense += parseFloat(expense.amount)
       })
-      this.expenses = totalExpense
-      this.income = totalIncome
+      this.expenses = Math.round(totalExpense * 100) / 100
+      this.income = Math.round(totalIncome * 100) / 100
       this.balance = this.income - this.expenses
     }
   }
