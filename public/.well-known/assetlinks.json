@@ -1,6 +1,11 @@
-[{
-        "relation": ["delegate_permission/common.handle_all_urls"],
-        "target" : { "namespace": "android_app", "package_name": "app.electricity_calc_jl.com",
-                     "sha256_cert_fingerprints": ["66:C5:65:C2:A9:AC:99:DE:24:81:2E:D1:0F:69:F2:B8:8A:B6:BB:2B:43:6D:5C:F8:F6:EC:5A:68:FD:B1:03:A1"] }
-      }
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.finances_tracker_jl.com",
+      "sha256_cert_fingerprints":
+      ["77:49:07:42:61:4E:AF:32:72:B0:4A:12:70:4E:29:90:1A:86:AC:C0:56:B7:EA:6D:7E:B5:8C:45:04:56:D1:31"]
+    }
+  }
 ]
