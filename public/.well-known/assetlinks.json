@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "app.finances_tracker_jl.com",
+      "package_name": "app.finances_tracker_lite.com",
       "sha256_cert_fingerprints":
-      ["77:49:07:42:61:4E:AF:32:72:B0:4A:12:70:4E:29:90:1A:86:AC:C0:56:B7:EA:6D:7E:B5:8C:45:04:56:D1:31"]
+      ["6E:DD:E4:46:D3:A3:40:1E:41:15:41:AF:6D:C8:11:1C:95:5E:02:7B:1C:08:2D:59:E4:52:11:2A:9F:6B:AA:E7"]
     }
   }
 ]
