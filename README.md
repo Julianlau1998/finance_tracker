@@ -1,4 +1,4 @@
-# energy_calc
+# finance_tracker
 
 ## Project setup
 ```
