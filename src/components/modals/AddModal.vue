@@ -71,6 +71,7 @@ export default {
     },
     methods: {
         add () {
+            this.amount = this.amount.replace(',', '.')
             if (this.title.length && this.amount > 0) {
               this.$emit('add', { title: this.title, amount: this.amount, uuid: this.editElement ? this.editElement.uuid : ''})
             }
